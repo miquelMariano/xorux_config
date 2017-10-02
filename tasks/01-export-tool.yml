@@ -6,12 +6,12 @@
     state: directory
     mode: 0755
 
-- name: Copy install files
-  copy:
-    src: export.tar
-    dest: /opt/hds/{{ firmware_version }}
-
 - name: Extract files
   unarchive:
     src: export.tar
     dest: /opt/hds/{{ firmware_version }}
+
+- name: Set directory owner
+  file:
+    path: /opt/hds
+    owner: stor2rrd
