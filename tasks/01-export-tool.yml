@@ -5,3 +5,8 @@
     path: /opt/hds/{{ firmware_version }}
     state: directory
     mode: 0755
+
+- name: Copy install files
+  copy:
+    src: export.tar
+    dest: /opt/hds/{{ firmware_version }}
