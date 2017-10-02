@@ -10,3 +10,6 @@
   copy:
     src: export.tar
     dest: /opt/hds/{{ firmware_version }}
+
+- name: Unzip files
+  shell: "tar xvf export.tar"
