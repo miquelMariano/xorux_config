@@ -1,0 +1,11 @@
+---
+
+- name: Configure Export Tool installation directory
+- name: Disable IPv6
+  replace:
+    path: /etc/default/grub
+    regexp: '^VSP_CLIDIR='
+    replace: 'VSP_CLIDIR=/opt/hds'
+    backup: yes
+
+  

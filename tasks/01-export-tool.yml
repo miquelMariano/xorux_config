@@ -11,8 +11,8 @@
     src: export.tar
     dest: /opt/hds/{{ firmware_version }}
 
-- name: Set directory owner
-  file:
-    path: /opt/hds
-    owner: stor2rrd
-    mode: 0644
+#- name: Set directory owner
+#  file:
+#    path: /opt/hds
+#    owner: stor2rrd
+#    mode: 0644
