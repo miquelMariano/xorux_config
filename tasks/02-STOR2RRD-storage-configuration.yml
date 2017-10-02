@@ -1,9 +1,8 @@
 ---
 
 - name: Configure Export Tool installation directory
-- name: Disable IPv6
   replace:
-    path: /etc/default/grub
+    path: /home/stor2rrd/stor2rrd/etc/stor2rrd.cfg
     regexp: '^VSP_CLIDIR='
     replace: 'VSP_CLIDIR=/opt/hds'
     backup: yes
