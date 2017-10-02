@@ -13,5 +13,5 @@
 
 - name: Extract files
   unarchive:
-    src: /opt/hds/{{ firmware_version }}/export.tar
+    src: export.tar
     dest: /opt/hds/{{ firmware_version }}
