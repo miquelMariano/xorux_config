@@ -3,6 +3,6 @@
 - name: Configure Export Tool installation directory
   replace:
     path: /home/stor2rrd/stor2rrd/etc/stor2rrd.cfg
-    regexp: '^VSP_CLIDIR='
-    replace: 'VSP_CLIDIR=/opt/hds'
+    regexp: '^  VSP_CLIDIR=/usr'
+    replace: '  VSP_CLIDIR=/opt/hds'
     backup: yes
