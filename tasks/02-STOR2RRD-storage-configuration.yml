@@ -7,5 +7,3 @@
     regexp: '^VSP_CLIDIR='
     replace: 'VSP_CLIDIR=/opt/hds'
     backup: yes
-
-  
