@@ -16,7 +16,7 @@
 - include: 01-export-tool.yml
   tags: export-tool
 
-- include: 02-STOR2RRD-storage-configuration
+- include: 02-STOR2RRD-storage-configuration.yml
   tags: configuration
 
 
