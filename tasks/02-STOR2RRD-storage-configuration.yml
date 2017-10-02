@@ -6,3 +6,5 @@
     regexp: '^  VSP_CLIDIR=/usr'
     replace: '  VSP_CLIDIR=/opt/hds'
     backup: yes
+
+#
