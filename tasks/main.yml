@@ -13,4 +13,7 @@
     SN_VSP1: 470853
     SN_VSP2: 471006
 
+- include: 01-export-tool.yml
+  tags: export-tool
+
 

@@ -1,2 +1,12 @@
 ---
 # vars file for roles/xorux_config
+
+#Install each version of the Export Tool into separate directory named as firmware of your storage
+#Find our firmware release of your storage 
+#See http://www.stor2rrd.com/Hitachi-VSPG-VSP-HUS-AMS-monitoring.htm
+
+#$ raidqry -l -I1 
+#   No  Group    Hostname     HORCM_ver   Uid   Serial#   Micro_ver     Cache(MB)
+#    1    ---   localhost   01-35-03-08     0   471234    83-01-28/00      320000
+
+firmware_version: 83-04-26
