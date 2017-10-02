@@ -15,3 +15,4 @@
   file:
     path: /opt/hds
     owner: stor2rrd
+    mode: 0644
