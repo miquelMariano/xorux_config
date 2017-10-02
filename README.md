@@ -13,7 +13,7 @@ See Dependencies
 Role Variables
 --------------
 
-Optionaly define {{ SN_VSP1}} and {{ SN_VSP2 }} variables
+Optionaly define {{ SN_VSP1}} and {{ SN_VSP2 }} variables on tasks/main.yml file
 
 Dependencies
 ------------
