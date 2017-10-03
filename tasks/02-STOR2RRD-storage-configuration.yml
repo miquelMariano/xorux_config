@@ -24,4 +24,5 @@
   register: result
 
 - name: Debug
-  debug: var=result.stdout
+  debug: 
+    var: result.stdout
