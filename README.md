@@ -13,7 +13,7 @@ See Dependencies
 Role Variables
 --------------
 
-Optionaly define {{ SN_VSP1}} and {{ SN_VSP2 }} variables on tasks/main.yml file
+View vars/main.yml
 
 Dependencies
 ------------
@@ -26,28 +26,37 @@ Example Playbook
 ----------------
 
 ```yaml
+##USAGE
+#ansible-playbook playbooks/xorux.yml -i inventory/servers -e "servers=xorux-prod update_mode=true"
+
+#This play is executed when update_mode var is "true" and ensure that role is up to date. By default update var is "false"
 - hosts: ansible
   user: root
   tasks:
-     - name: Ensure that role are up to date
-       command: ansible-galaxy install --force {{ item }}
-       with_items:
-          - miquelMariano.hitachiCCI
-       when:
-          - update_mode | default(False)
-       tags: update
-       ignore_errors: yes
+    - name: Ensure that role are up to date
+      command: ansible-galaxy install --force {{ item }}
+      with_items:
+        - miquelMariano.xorux_config
+      when:
+        - update_mode | default(False)
+      tags: update
+      ignore_errors: yes
 
-- hosts: "{{ servers }}"
+#Role folder must be exist. If not, the playbook not found role and fails. You shoud make dir manually "mkdir /etc/ansible/my_role"
+- name: Xorux appliance configuration
+  hosts: "{{ servers }}:!localhost"
   user: root
+  serial: 1
   roles:
-    - role: miquelMariano.hitachiCCI
+   - role: miquelMariano.xorux_config
 ```
 
 Usage
 -------
 
-`ansible-playbook playbooks/xorux.yml -i hosts -e "servers=xorux install=true update_mode=true" --tags=install`
+```
+ansible-playbook playbooks/xorux.yml -i inventory/servers -e "servers=xorux-prod update_mode=true"
+```
 
 License
 -------
