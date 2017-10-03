@@ -21,3 +21,7 @@
   shell: ./config_check.sh
   args:
     chdir: /home/stor2rrd/stor2rrd/bin
+  register: result
+
+- name: Debug
+  debug: var=result.stdout
