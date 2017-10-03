@@ -1,7 +1,10 @@
 ---
 
 - name: Set folder owner
-  shell: chown -R root /home/lpar2rrd/stor2rrd/
+#  shell: chown -R root /home/lpar2rrd/stor2rrd/
+  file:
+    path: /home/lpar2rrd/stor2rrd/
+    owner: root
 
 - name: Configure Export Tool installation directory
   replace:
