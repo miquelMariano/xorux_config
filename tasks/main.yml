@@ -14,7 +14,8 @@
     SN_VSP2: 471006
 
 - name: Start HORCM
-  shell: horcmstart.sh 300 301    
+  shell: horcmstart.sh 300 301 
+  ignore_errors: yes   
 
 - include: 01-export-tool.yml
   tags: export-tool
