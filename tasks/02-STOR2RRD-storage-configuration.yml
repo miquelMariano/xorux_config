@@ -7,4 +7,13 @@
     replace: '  VSP_CLIDIR=/opt/hds'
     backup: yes
 
-#
+- name: Configure storage-list
+  lineinfile:
+    dest: /home/stor2rrd/stor2rrd/etc/storage-list.cfg
+    state: present
+    insertafter: "^# Hitachi VSP-G"
+    line: "{{ item }}"
+  with_items:
+    - LOGGSG800SVP01:VSPG:172.25.34.4:maintenance:MDxGJUk5IlVNODZFTj0mNU44NllDOTBgYAo=:/etc/horcm300.conf
+	- LOGIXG800SVP01:VSPG:172.25.34.6:maintenance:MDxGJUk5IlVNODZFTj0mNU44NllDOTBgYAo=:/etc/horcm301.conf
+        
