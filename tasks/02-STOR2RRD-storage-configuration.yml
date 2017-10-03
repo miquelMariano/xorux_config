@@ -15,5 +15,9 @@
     line: "{{ item }}"
   with_items:
     - LOGGSG800SVP01:VSPG:172.25.34.4:maintenance:MDxGJUk5IlVNODZFTj0mNU44NllDOTBgYAo=:/etc/horcm300.conf
-	- LOGIXG800SVP01:VSPG:172.25.34.6:maintenance:MDxGJUk5IlVNODZFTj0mNU44NllDOTBgYAo=:/etc/horcm301.conf
-        
+    - LOGIXG800SVP01:VSPG:172.25.34.6:maintenance:MDxGJUk5IlVNODZFTj0mNU44NllDOTBgYAo=:/etc/horcm301.conf
+
+- name: Check connection
+  shell: ./config_check.sh
+  args:
+    chdir: /home/stor2rrd/stor2rrd/bin
