@@ -40,5 +40,5 @@
     insertafter: "^#"
     line: "{{ item }}"
   with_items:
-     - 0,5,10,15,20,25,30,35,40,45,50,55 * * * * /home/stor2rrd/stor2rrd/load_vspgperf.sh > /home/stor2rrd/stor2rrd/load_vspgperf.ou t
+     - 0,5,10,15,20,25,30,35,40,45,50,55 * * * * /home/stor2rrd/stor2rrd/load_vspgperf.sh > /home/stor2rrd/stor2rrd/load_vspgperf.out
      - 0 * * * * /home/stor2rrd/stor2rrd/load.sh > /home/stor2rrd/stor2rrd/load.out 2>&1    
