@@ -13,7 +13,13 @@ See Dependencies
 Role Variables
 --------------
 
-View vars/main.yml
+`firmware_version`
+Export Tool version must match the SVP firmware version.
+```
+$ raidqry -l -I1 
+  No  Group    Hostname     HORCM_ver   Uid   Serial#   Micro_ver     Cache(MB)
+   1    ---   localhost   01-35-03-08     0   471234    83-01-28/00      320000
+```
 
 Dependencies
 ------------
@@ -45,8 +51,6 @@ Example Playbook
 #Role folder must be exist. If not, the playbook not found role and fails. You shoud make dir manually "mkdir /etc/ansible/my_role"
 - name: Xorux appliance configuration
   hosts: "{{ servers }}:!localhost"
-  vars:
-    - firmware_version: 83-04-26
   user: root
   serial: 1
   roles:
@@ -57,7 +61,7 @@ Usage
 -------
 
 ```
-ansible-playbook playbooks/xorux.yml -i inventory/servers -e "servers=xorux-prod update_mode=true"
+ansible-playbook playbooks/xorux.yml -i inventory/servers -e "servers=xorux-prod firmware_version=83-04-26 update_mode=true"
 ```
 
 License

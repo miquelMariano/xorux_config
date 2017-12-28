@@ -9,4 +9,4 @@
 #   No  Group    Hostname     HORCM_ver   Uid   Serial#   Micro_ver     Cache(MB)
 #    1    ---   localhost   01-35-03-08     0   471234    83-01-28/00      320000
 
-firmware_version: 83-04-26
+#firmware_version: 83-04-26
