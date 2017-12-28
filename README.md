@@ -45,6 +45,8 @@ Example Playbook
 #Role folder must be exist. If not, the playbook not found role and fails. You shoud make dir manually "mkdir /etc/ansible/my_role"
 - name: Xorux appliance configuration
   hosts: "{{ servers }}:!localhost"
+  vars:
+    - firmware_version: 83-04-26
   user: root
   serial: 1
   roles:
