@@ -16,7 +16,7 @@ Role Variables
 `firmware_version`
 Export Tool version must match the SVP firmware version.
 ```
-$ raidqry -l -I1 
+$ raidqry -l -I300 
   No  Group    Hostname     HORCM_ver   Uid   Serial#   Micro_ver     Cache(MB)
    1    ---   localhost   01-35-03-08     0   471234    83-01-28/00      320000
 ```

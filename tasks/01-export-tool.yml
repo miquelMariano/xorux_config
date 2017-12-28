@@ -8,7 +8,7 @@
 
 - name: Extract files
   unarchive:
-    src: {{ firmware_version }}/export.tar
+    src: '{{ firmware_version }}/export.tar'
     dest: /opt/hds/{{ firmware_version }}
 
 #- name: Set directory owner
