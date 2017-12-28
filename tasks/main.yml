@@ -14,7 +14,7 @@
     SN_VSP2: 471006
 
 - name: Stop HORCM
-  shell: horcmstop.sh 300 301 
+  shell: horcmshutdown.sh 300 301 
   ignore_errors: yes   
 
 - name: Start HORCM
