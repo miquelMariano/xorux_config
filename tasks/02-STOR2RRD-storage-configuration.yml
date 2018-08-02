@@ -1,7 +1,7 @@
 ---
 
-- name: Set folder owner
-  shell: chown -R root /home/lpar2rrd/stor2rrd/
+#- name: Set folder owner
+#  shell: chown -R root /home/lpar2rrd/stor2rrd/
 #  file:
 #    path: /home/lpar2rrd/stor2rrd/
 #    owner: root
