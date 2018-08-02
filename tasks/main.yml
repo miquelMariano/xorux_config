@@ -5,13 +5,13 @@
 - include: 00-hostname.yml
   tags: hostname
 
-- include_role:
-    name: miquelMariano.hitachiCCI  
-  tags: cci
-  vars:
-    install: true
-    SN_VSP1: 470853
-    SN_VSP2: 471006
+#- include_role:
+#    name: miquelmariano.hitachicci  
+#  tags: cci
+#  vars:
+#    install: true
+#    SN_VSP1: 470853
+#    SN_VSP2: 471006
 
 - name: Stop HORCM
   shell: horcmshutdown.sh 300 301 63
