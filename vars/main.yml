@@ -10,3 +10,12 @@
 #    1    ---   localhost   01-35-03-08     0   471234    83-01-28/00      320000
 
 #firmware_version: 83-04-26
+
+VSP1_ALIAS: G200_B1
+VSP2_ALIAS: G200_B2
+
+VSP1_IP: 192.168.10.80
+VSP2_IP: 192.168.10.83
+
+HORCM_VSP1: horcm1.conf
+HORCM_VSP2: horcm2.conf
