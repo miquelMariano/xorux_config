@@ -14,11 +14,11 @@
 #    SN_VSP2: 471006
 
 - name: Stop HORCM
-  shell: horcmshutdown.sh 300 301 63
+  shell: horcmshutdown.sh {{ HORCM_VSP1 }} {{ HORCM_VSP2 }}
   ignore_errors: yes   
 
 - name: Start HORCM
-  shell: horcmstart.sh 300 301 63
+  shell: horcmstart.sh {{ HORCM_VSP1 }} {{ HORCM_VSP2 }}
   ignore_errors: yes   
 
 - include: 01-export-tool.yml
