@@ -47,7 +47,7 @@ Example Playbook
     - name: Ensure that role are up to date
       command: ansible-galaxy install --force {{ item }}
       with_items:
-        - miquelMariano.xorux_config
+        - miquelmariano.xorux_config
       when:
         - update_mode | default(False)
       tags: update
@@ -59,7 +59,7 @@ Example Playbook
   user: root
   serial: 1
   roles:
-   - role: miquelMariano.xorux_config
+   - role: miquelmariano.xorux_config
 ```
 
 Usage
