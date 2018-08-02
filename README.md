@@ -3,6 +3,11 @@ Role Name
 
 This role configure a Xorux appliance to monitoring VSP Gx00 arrays
 
+Install from Ansible Galaxy
+------------------------------------
+
+`ansible-galaxy install miquelmariano.xorux_config`
+
 Requirements
 ------------
 
@@ -25,7 +30,7 @@ Dependencies
 ------------
 
 ```
-ansible-galaxy install miquelMariano.hitachiCCI
+ansible-galaxy install miquelmariano.hitachicci
 ```
 
 Example Playbook
