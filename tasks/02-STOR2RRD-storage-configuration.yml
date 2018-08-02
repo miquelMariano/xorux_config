@@ -20,8 +20,8 @@
     insertafter: "^# Hitachi VSP-G"
     line: "{{ item }}"
   with_items:
-    - "{{ VSP1_ALIAS }}:VSPG:{{ VSP1_IP }}:maintenance:KzImRVQwIyhQLDM5JDo3MGAK:/etc/{{ HORCM_VSP1 }}"
-    - "{{ VSP2_ALIAS }}:VSPG:{{ VSP2_IP }}:maintenance:KzImRVQwIyhQLDM5JDo3MGAK:/etc/{{ HORCM_VSP2 }}"
+    - "{{ VSP1_ALIAS }}:VSPG:{{ VSP1_IP }}:maintenance:KzImRVQwIyhQLDM5JDo3MGAK:/etc/horcm{{ HORCM_VSP1 }}.conf"
+    - "{{ VSP2_ALIAS }}:VSPG:{{ VSP2_IP }}:maintenance:KzImRVQwIyhQLDM5JDo3MGAK:/etc/horcm{{ HORCM_VSP2 }}.conf"
 
 - name: Check connection
   shell: ./config_check.sh
