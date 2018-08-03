@@ -2,8 +2,8 @@
 # tasks file for roles/xorux_config
 
 
-- include: 00-hostname.yml
-  tags: hostname
+#- include: 00-hostname.yml
+#  tags: hostname
 
 #- include_role:
 #    name: miquelmariano.hitachicci  
