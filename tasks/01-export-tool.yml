@@ -4,8 +4,8 @@
   shell: "{{ item }}"
   with_items:
     - "touch /HORCM/etc/USE_OLD_IOCT"
-    - "chown stor2rrd /HORCM"
-    - "chown -R stor2rrd /HORCM/* /HORCM/.uds"
+    - "chown lpar2rrd /HORCM"
+    - "chown -R lpar2rrd /HORCM/* /HORCM/.uds"
     - "chmod 755 /HORCM /HORCM/usr/bin /HORCM/usr/bin/* /HORCM/log* /HORCM/etc/horcmgr /HORCM/etc/*conf /HORCM/.uds/"
 
 - name: Ensure directory /opt/hds/firmware_version are exists
