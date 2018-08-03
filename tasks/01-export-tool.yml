@@ -2,13 +2,14 @@
 
 - name: Set CCI permisisons
   shell: "{{ item }}"
+  args:
+    warn:false
   with_items:
     - "touch /HORCM/etc/USE_OLD_IOCT"
     - "chown lpar2rrd /HORCM"
     - "chown -R lpar2rrd /HORCM/* /HORCM/.uds"
     - "chmod 755 /HORCM /HORCM/usr/bin /HORCM/usr/bin/* /HORCM/log* /HORCM/etc/horcmgr /HORCM/etc/*conf /HORCM/.uds/"
-  args:
-    warn:false
+  
 
 - name: Ensure directory /opt/hds/firmware_version are exists
   file:
