@@ -13,13 +13,13 @@
 #    SN_VSP1: 470853
 #    SN_VSP2: 471006
 
-- name: Stop HORCM
-  shell: horcmshutdown.sh {{ HORCM_VSP1 }} {{ HORCM_VSP2 }}
-  ignore_errors: yes   
+#- name: Stop HORCM
+#  shell: horcmshutdown.sh {{ HORCM_VSP1 }} {{ HORCM_VSP2 }}
+#  ignore_errors: yes   
 
-- name: Start HORCM
-  shell: horcmstart.sh {{ HORCM_VSP1 }} {{ HORCM_VSP2 }}
-  ignore_errors: yes   
+#- name: Start HORCM
+#  shell: horcmstart.sh {{ HORCM_VSP1 }} {{ HORCM_VSP2 }}
+#  ignore_errors: yes   
 
 - include: 01-export-tool.yml
   tags: export-tool
