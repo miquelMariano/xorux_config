@@ -1,7 +1,7 @@
 ---
 
 - name: Set CCI permisisons
-  shell: "{{ item }}""
+  shell: "{{ item }}"
   with_items:
     - "touch /HORCM/etc/USE_OLD_IOCT"
     - "chown stor2rrd /HORCM"
