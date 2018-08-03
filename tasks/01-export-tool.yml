@@ -1,5 +1,13 @@
 ---
 
+- name: Set CCI permisisons
+  shell: {{ item }}
+  with_items:
+    - "touch /HORCM/etc/USE_OLD_IOCT"
+    - "chown stor2rrd /HORCM"
+    - "chown -R stor2rrd /HORCM/* /HORCM/.uds"
+    - "chmod 755 /HORCM /HORCM/usr/bin /HORCM/usr/bin/* /HORCM/log* /HORCM/etc/horcmgr /HORCM/etc/*conf /HORCM/.uds/"
+
 - name: Ensure directory /opt/hds/firmware_version are exists
   file:
     path: /opt/hds/{{ firmware_version }}
@@ -11,8 +19,9 @@
     src: '{{ firmware_version }}/export.tar'
     dest: /opt/hds/{{ firmware_version }}
 
-#- name: Set directory owner
+- name: Set folder owner
+  shell: chown -R stor2rrd /opt/hds
 #  file:
-#    path: /opt/hds
-#    owner: stor2rrd
-#    mode: 0644
+#    path: /home/lpar2rrd/stor2rrd/
+#    owner: root
+
