@@ -23,6 +23,8 @@
 
 - name: Set folder owner
   shell: chown -R lpar2rrd /opt/hds
+  args:
+    warn:false
 #  file:
 #    path: /home/lpar2rrd/stor2rrd/
 #    owner: root
