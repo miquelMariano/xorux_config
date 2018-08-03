@@ -3,7 +3,7 @@
 - name: Set CCI permisisons
   shell: "{{ item }}"
   args:
-    warn:false
+    warn: false
   with_items:
     - "touch /HORCM/etc/USE_OLD_IOCT"
     - "chown lpar2rrd /HORCM"
@@ -25,7 +25,7 @@
 - name: Set folder owner
   shell: chown -R lpar2rrd /opt/hds
   args:
-    warn:false
+    warn: false
 #  file:
 #    path: /home/lpar2rrd/stor2rrd/
 #    owner: root
