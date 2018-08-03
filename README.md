@@ -37,8 +37,7 @@ Example Playbook
 ----------------
 
 ```yaml
-##USAGE
-#ansible-playbook playbooks/xorux.yml -i inventory/servers -e "servers=xorux-prod update_mode=true"
+#xorux.yml
 
 #This play is executed when update_mode var is "true" and ensure that role is up to date. By default update var is "false"
 - hosts: ansible
