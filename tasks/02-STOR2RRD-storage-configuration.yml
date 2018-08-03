@@ -6,12 +6,12 @@
 #    path: /home/lpar2rrd/stor2rrd/
 #    owner: root
 
-- name: Configure Export Tool installation directory
-  replace:
-    path: /home/stor2rrd/stor2rrd/etc/stor2rrd.cfg
-    regexp: '^  VSP_CLIDIR=/usr'
-    replace: '  VSP_CLIDIR=/opt/hds'
-    backup: yes
+#- name: Configure Export Tool installation directory
+#  replace:
+#    path: /home/stor2rrd/stor2rrd/etc/stor2rrd.cfg
+#    regexp: '^  VSP_CLIDIR=/usr'
+#    replace: '  VSP_CLIDIR=/opt/hds'
+#    backup: yes
 
 - name: Configure storage-list
   lineinfile:
@@ -33,12 +33,12 @@
   debug: 
     var: result.stdout
 
-- name: Set crontab -e
-  lineinfile:
-    dest: /var/spool/cron/root
-    state: present
-    insertafter: "^#"
-    line: "{{ item }}"
-  with_items:
-     - 0,5,10,15,20,25,30,35,40,45,50,55 * * * * /home/stor2rrd/stor2rrd/load_vspgperf.sh > /home/stor2rrd/stor2rrd/load_vspgperf.out
-     - 0 * * * * /home/stor2rrd/stor2rrd/load.sh > /home/stor2rrd/stor2rrd/load.out 2>&1    
+#- name: Set crontab -e
+#  lineinfile:
+#    dest: /var/spool/cron/root
+#    state: present
+#    insertafter: "^#"
+#    line: "{{ item }}"
+#  with_items:
+#     - 0,5,10,15,20,25,30,35,40,45,50,55 * * * * /home/stor2rrd/stor2rrd/load_vspgperf.sh > /home/stor2rrd/stor2rrd/load_vspgperf.out
+#     - 0 * * * * /home/stor2rrd/stor2rrd/load.sh > /home/stor2rrd/stor2rrd/load.out 2>&1    
