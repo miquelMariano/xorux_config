@@ -21,7 +21,7 @@
     line: "{{ item }}"
   with_items:
     - "{{ VSP1_ALIAS }}:VSPG:{{ VSP1_IP }}:maintenance:MDxGJUk5IlVNODZFTj0mNU44NllDOTBgYAo=:/etc/horcm{{ HORCM_VSP1 }}.conf"
-#    - "{{ VSP2_ALIAS }}:VSPG:{{ VSP2_IP }}:maintenance:MDxGJUk5IlVNODZFTj0mNU44NllDOTBgYAo=:/etc/horcm{{ HORCM_VSP2 }}.conf"
+    - "{{ VSP2_ALIAS }}:VSPG:{{ VSP2_IP }}:maintenance:MDxGJUk5IlVNODZFTj0mNU44NllDOTBgYAo=:/etc/horcm{{ HORCM_VSP2 }}.conf"
 
 #- name: Check connection
 #  shell: ./config_check.sh
